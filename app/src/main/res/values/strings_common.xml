@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="terminate_notification">Press back again to close application.</string>
+    <string name="please_wait">Please wait&#8230;</string>
+    <string name="topdeal">Top Deal</string>
+    <string name="populardeal">Popular Deal</string>
+    <string name="app_title">Deal</string>
+    <string name="datanotfound">Popular Deals are not available.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="status">Status</string>
+    <string name="ok">OK</string>
+</resources>

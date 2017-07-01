@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "demo.paritycube.com.deals"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        mavenCentral()
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            applicationIdSuffix '.debug'
+            buildConfigField("String", "SCHEME", "\"http:\"")
+            buildConfigField("String", "AUTHORITY", "\"//139.162.46.29\"")
+            buildConfigField("String", "SERVER_URL", "\"http://139.162.46.29/v3\"")
+            resValue 'string', 'app_name', 'ParityCube-SIT'
+        }
+        uat.initWith(buildTypes.debug)
+        uat {
+            applicationIdSuffix '.uat'
+            buildConfigField("String", "SCHEME", "\"http:\"")
+            buildConfigField("String", "AUTHORITY", "\"//139.162.46.29\"")
+            buildConfigField("String", "SERVER_URL", "\"http://139.162.46.29/v3\"")
+            resValue 'string', 'app_name', 'ParityCube-UAT'
+        }
+        release {
+            minifyEnabled false
+            resValue 'string', 'app_name', 'ParityCube'
+            buildConfigField("String", "SCHEME", "\"http:\"")
+            buildConfigField("String", "AUTHORITY", "\"//139.162.46.29\"")
+            buildConfigField("String", "SERVER_URL", "\"http://139.162.46.29/v3\"")
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-annotations:25.3.0'
+    compile 'com.android.support:recyclerview-v7:25.3.0'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:support-v4:25.3.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.18.0'
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'me.tatarka.retrolambda'

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="menu_logout">Logout</string>
+
+  <string-array name="menu">
+    <item>Home</item>
+    <item>Top Deal</item>
+    <item>Popular Deal</item>
+    <item>Settings</item>
+
+  </string-array>
+
+  <array name="menu_icons">
+    <item>@drawable/menu_home</item>
+    <item>@drawable/menu_allocate</item>
+    <item>@drawable/menu_dispatch_empty</item>
+    <item>@drawable/menu_dispatch_empty</item>
+  </array>
+
+
+  <array name="menu_colors">
+    <item>#ebb438</item>
+    <item>#1c7caf</item>
+    <item>#35bbb6</item>
+    <item>#f46352</item>
+    <item>#b4cf35</item>
+    <item>#47b5c8</item>
+  </array>
+</resources>

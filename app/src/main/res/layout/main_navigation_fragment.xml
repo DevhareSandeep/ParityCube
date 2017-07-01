@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+  <data>
+    <import type="demo.paritycube.com.deals.util.TypefaceFactory"/>
+  </data>
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/content"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:clickable="true"/>
+    <View android:id="@+id/toolbar_bg"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/toolbar"
+          android:background="@color/colorPrimary"
+          android:visibility="gone"/>
+    <demo.paritycube.com.deals.misc.widgets.AppToolBar android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+                                                             android:layout_width="match_parent"
+                                                             android:layout_height="@dimen/toolbar"
+                                                             android:minHeight="48dp"
+                                                             android:paddingTop="@dimen/status_bar">
+      <TextView android:id="@+id/title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:typeface="@{TypefaceFactory.getTypeFaceForId(context, TypefaceFactory.RobotoRegular)}"
+                tools:ignore="SpUsage"
+                tools:text="navigation Title"/>
+    </demo.paritycube.com.deals.misc.widgets.AppToolBar>
+  </RelativeLayout>
+</layout>

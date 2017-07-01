@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="login_email">E-mail Address</string>
+  <string name="login_password">Password</string>
+  <string name="login">Sign In</string>
+  <string name="fblogin">Sign In</string>
+  <string name="login_remember_password">Remember Password?</string>
+  <string name="or">OR</string>
+  <string name="login_forgot_password">Forgot Password?</string>
+
+  <string name="login_invalid_email">Username not a valid email address.</string>
+  <string name="login_username_required">Username is required.</string>
+  <string name="login_password_required">Password is required.</string>
+  <string name="login_failed">Invalid username/password.</string>
+  <string name="login_session_expired">Your session has expired.</string>
+  <string name="login_sign_out_confirmation">Are you sure you want to Sign Out?</string>
+  <string name="login_sign_out_successful">You have successfully logged out.</string>
+  <string name="facebook_app_id">1503403829710996</string>
+  <!--Default debug login-->
+  <string name="email_id">test@parity.com</string>
+  <string name="password">parity</string>
+</resources>

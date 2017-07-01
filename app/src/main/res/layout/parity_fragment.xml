@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.DrawerLayout android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment android:id="@+id/main_navigation_fragment"
+            android:name="demo.paritycube.com.deals.views.MainNavigationFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <fragment android:id="@+id/menu_fragment"
+            android:name="demo.paritycube.com.deals.views.menu.MenuFragment"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"/>
+    </android.support.v4.widget.DrawerLayout>
+</layout>
